@@ -28,13 +28,13 @@
 * Vamos a usar nada mas que una terminal y un editor para crear apps web
 * Emocionense esto es muchisimo poder
 
-### Session 1: The environment
+### Sesión 1: The environment
 * Download https://www.virtualbox.org/
   * For windows http://download.virtualbox.org/virtualbox/4.1.16/VirtualBox-4.1.16-78094-Win.exe
 * Download vagrant vagrant_1.0.3.msi
 * Download the box (my host)
 
-### Session 2: CLI
+### Sesión 2: CLI
 * Basic CLI commands cheat sheet:
   * l
     - List current folder contents
@@ -104,67 +104,120 @@
   9 - Escribir su stand up en archivos separados
 
 
-### Session 3: VIM Editor tabs and motions
-* VIM Editor tabs and motions cheat sheet
+### Sesión 3: Movimientos, copiar, pegar y buscar en VIM + Ruby variables
+en ruby
+* Cheat sheet de esta sesión:
   * En modo commando:
 
-    - Para moverse de palabra en palabra
-      - Presiona "w"
-        * hacia adelante
-      - Presiona "b"
-        * hacia atras
+    - Movimientos
+      * Para moverse de palabra en palabra
+        - Presiona "w"
+          * Hacia adelante
+        - Presiona "b"
+          * Hacia atras
 
-    - borrar lineas
+      * Ir a final de linea
+        - Presiona "$"
+
+      * Ir a inicio de linea
+        - Presiona "0"
+
+      * Ir a inicio de archivo
+        - Presiona "gg"
+
+      * Ir a final de archivo
+        - Presiona "G"
+
+      * Ir a cierta linea
+        - Presiona "23G", para ir a linea 23, el numero entero indica la
+          linea
+
+    - Borrar lineas
       * Presiona "dd"
-        - borrar la linea sobre la cual esta el cursor
+        - Borrar la linea sobre la cual esta el cursor
       * Presiona "d2d"
-        - borrar la linea del cursos y la que esta debajo de ella
+        - Borrar la linea sobre la cual esta el cursor y la que esta debajo de ella
 
-    - copiar lineas
+    - Copiar lineas
       * Presiona "yy"
+        - Copiar la linea sobre la cual esta el cursor
+      * Presiona "y2y"
+        - Copiar la linea sobre la cual esta el cursor y la que esta
+          debajo de ella
 
+    - Pegar lineas
+      * Presiona "p"
+        - Pegar en la linea debajo de donde esta el cursor
+      * Presiona "P"
+        - Pegar en la linea arriba de donde esta el cursor
 
-## Rest 2 - :55 hr .. :60 hr
+    - Busqueda
+      * Presiona "/bla" para buscar el texto bla, luego enter para ir a
+        la occurrencia
+        - Movimiento entre ocurrencias
+          * Presiona "n"
+            - Ve a la siguiente ocurrencia
+          * Presiona "N"
+            - Ve a la anterior ocurrencia
 
-# 3 - 1 hr .. 1:25 hr
-* About ruby 1
-  * conditionals
-  * loops
-  * scripts
+  * En modo edición
+    * Autocompletado
+      - Presiona la tecla tab para autocompletar
+      - Muevete hacia arriba o abajo de la lista de palabras y presiona
+        enter para elegir una
 
-## Rest 3 - 1:25 hr .. 1:30 hr
+* Ejercicio:
+  - Crea un archivo llamado "variables.rb" con los siguientes contenidos:
 
-# 4 - 1:30 hr .. 1:55hr
-* About ruby 2
-  * Classes and modules
-  * Composing larger ruby applications
-  * Exercises
+      integer_variable = 2
+      string_variable = "a"
+      float_variable = 1.0
 
-## Rest 4 - 1:55 hr .. 2:10 hr
+      puts "Mi variable sin interpolar: "
+      puts integer_variable
+      puts "Mi variable interpolada: #{string_variable}"
+      puts 'Comilla simple no interpola nada: #{string_variable}'
 
-# 5 - 2:10 hr .. 2:35 hr
-* About HTML
-  * Creating basic pages
-  * Serving them with Rack
+  - Una vez que el archivo ha sido guardado, sin salir de vim, presiona
+    ctr-z para mandar vim al background, y ejecuta lo siguiente:
 
-## Rest 5 - 2:35 hr .. 2:40 hr
+    ruby variables.rb
 
-# 6 - 2:40 hr .. 3:05
-* About CSS
-  * Using selectors
-  * Using some css properties
+  - Deberias ver los siguiente:
 
-## Rest 6 - 3:05 hr .. 3:10 hr
+      Mi variable sin interpolar:
+      2
+      Mi variable interpolada: a
+      Comilla simple no interpola nada: #{string_variable}
 
-# 7 - 3:10 .. 3:35
-* Dynamic pages
-  * Play with everything that we've learned so far
+  - Presiona bg para ver la lista de procesos en background, luego
+    presiona fg, para ir al proceso que estaba en background de vim
 
-## Rest 7 - 3:35 hr .. 3:40 hr
+  - Edita tu archivo e imprime el valor de cada variable de manera tal
+    que la salida del programa sea:
 
-# 8 - 3:40 hr .. 4:05
-* Welcome RoR
-  * What it is?
-  * Why to use frameworks?
-  * Creating a quick application
+      Mi variable sin interpolar:
+      2
+      integer_variable = 2
+      string_variable = a
+      float_variable = 1.0
+      Mi variable interpolada: a
+      Comilla simple no interpola nada: #{string_variable}
+
+### Sesión 4: VIM tabs + condicionales y cilos en Ruby
+
+### Sesión 5: Cláses, modulos y requires en Ruby
+
+### Sesión 6: Comando rails + HTML
+
+### Sesión 7: CSS
+* Using selectors
+* Using some css properties
+
+### Sesión 8: Que es RoR + TODO App
+* What it is?
+* Why to use frameworks?
+* Creating a quick application
+
+### Ses
 
