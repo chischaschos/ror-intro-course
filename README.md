@@ -49,6 +49,8 @@
   host: 127.0.0.1
   port: 2222
 * Cuando pida un username utiliza: vagrant
+  * Edita el archivo Vagrantfile, edita esta linea:
+    config.vm.forward_port 3000, 3000
 * Instala chrome browser
 
 ### Sesión 2: CLI
@@ -449,7 +451,7 @@ El objetivo por ahora es crear un archivo public/index.html.
 
     rails s
 
-  6 - Ve a la dirección http://localhost:3000
+  6 - Ve a la dirección en tu chrome browser http://localhost:3000
 
 ### Sesión 7: Que es RoR + Aplicación inegi
 Aprenderemos que es rails, que es un framework, rasgos generales de una
@@ -457,23 +459,28 @@ aplicación en rails.
 
 * Guia rápida para esta sección:
   - MVC
-  - Convenciones
+  - No hay magia solo convenciones
   - Alcances de un scaffold y partes que lo integran
 
 * Ejercicios:
+  0 - Borra el public/index.html
+
   1 - Vamos a crear una aplicación para manejar las personas del inegi:
 
     rails generate scaffold Persona name:string descripcion:text
 
   2 - Ahora configuramos la base de datos y creamos las tablas requeridas:
 
-    rake db:setup
+    rake db:create
+    rake db:migrate
 
   3 - Ahora probamos la aplicación
 
     rails s
 
   4 - Visitemos http://localhost:3000/personas
+
+  5 - ¿Que hicimos?
 
 ### Sesión 8: La M de modelo para MVC
 Ahora vamos a jugar con el modelo existente para conocer un poco de el
