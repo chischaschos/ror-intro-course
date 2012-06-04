@@ -204,7 +204,7 @@ en ruby
       Mi variable interpolada: a
       Comilla simple no interpola nada: #{string_variable}
 
-### Sesión 4: VIM tabs + condicionales y cilos en Ruby
+### Sesión 4: VIM tabs + condicionales y ciclos en Ruby
 
 ### Sesión 5: Cláses, modulos y requires en Ruby
 
@@ -219,5 +219,5 @@ en ruby
 * Why to use frameworks?
 * Creating a quick application
 
-### Ses
+### Sesion 9
 
