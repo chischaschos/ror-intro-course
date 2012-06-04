@@ -378,6 +378,7 @@ El objetivo por ahora es crear un archivo public/index.html.
   1 - Crearemos una app de rails, ejecuta el siguiente comando:
 
     rails new inegi
+    bundle
 
   2 - Mas adelante hablaremos de la estructura
 
@@ -450,11 +451,80 @@ El objetivo por ahora es crear un archivo public/index.html.
 
   6 - Ve a la dirección http://localhost:3000
 
-### Sesión 7: Que es RoR + Aplicacion inegi
+### Sesión 7: Que es RoR + Aplicación inegi
 Aprenderemos que es rails, que es un framework, rasgos generales de una
 aplicación en rails.
 
 * Guia rápida para esta sección:
+  - MVC
+  - Convenciones
+  - Alcances de un scaffold y partes que lo integran
+
+* Ejercicios:
+  1 - Vamos a crear una aplicación para manejar las personas del inegi:
+
+    rails generate scaffold Persona name:string descripcion:text
+
+  2 - Ahora configuramos la base de datos y creamos las tablas requeridas:
+
+    rake db:setup
+
+  3 - Ahora probamos la aplicación
+
+    rails s
+
+  4 - Visitemos http://localhost:3000/personas
+
+### Sesión 8: La M de modelo para MVC
+Ahora vamos a jugar con el modelo existente para conocer un poco de el
+alcance que tienen.
+
+* Guia rápida para esta sección
+  - La consola de rails
+    rails console
+
+  - Queries
+    - where
+    - find
+
+  - Ciclo de vida
+    - new
+    - create
+    - destroy
+
+  - callbacks
+    - before_save
+
+  - validaciones
+    - validates_presence_of
+
+  - relaciones
+    has_many
+    belong_to
 
 * Ejercicios:
 
+  1 - Empecemos por crear algunas personas mas:
+
+  2 - Ahora hagamos queries para buscar a esas personas:
+
+  3 - Ahora crearemos un nuevo modelo para crear una relación "uno a
+  muchos":
+
+  4 - Volvamos a crear personas con pueblos:
+
+  5 - Agreguemos validación para el nombre de la persona:
+
+  6 - Agreguemos descripciones por default:
+
+  7 - Hagamos queries sobre las relaciones:
+
+
+### Sesión 9: La C de controlador para MVC
+Ahora vamos a jugar con los controladores para conocer un poco de su
+objetivo y alcance.
+
+
+### Sesión 10: La V de vista para MVC
+Ahora vamos a jugar con las vistas para conocer un poco de su
+objetivo y alcance.
